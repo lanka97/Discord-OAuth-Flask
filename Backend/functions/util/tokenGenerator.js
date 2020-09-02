@@ -1,14 +1,14 @@
-const constants = require("./constants");
 const uuid4 = require("uuid4");
 const jwt = require('jsonwebtoken')
 
-const secret = "PhoneCase123"
+const secret = "SSD2"
+const TOKEN_EXPIRATION_TIME = 60 * 60 * 24 * 31 * 3;
 const issueToken = (uid, email, oldCycle = 0) => {
     
     let cycle = oldCycle + 1
     let opts = {}
     opts.subject = uid
-    opts.expiresIn = constants.TOKEN_EXPIRATION_TIME;
+    opts.expiresIn = TOKEN_EXPIRATION_TIME;
     let tokenId = uuid4()
 
     const token = jwt.sign({ email , uid,  tokenId, cycle }, secret, opts)

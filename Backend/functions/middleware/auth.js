@@ -1,6 +1,4 @@
 const firebaseDBConfig = require('../common/firebasedb');
-const constants = require('../util/constants');
-
 const admin = require('firebase-admin');
 const firebase = require('firebase');
 const tokenGenerator = require('../util/tokenGenerator');

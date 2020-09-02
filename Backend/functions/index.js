@@ -13,7 +13,6 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const api_routes = require('./routes/api')
-const admin_routes = require('./routes/admin')
 const authUser_routes = require('./routes/auth')
 
 admin.initializeApp({
@@ -57,7 +56,6 @@ app.use((req, res, next) => {
     next();
 })
 app.use('/api', api_routes)
-app.use('/admin', admin_routes)
 app.use('/auth', authUser_routes)
 
 // catch 404 and forward to error handler
