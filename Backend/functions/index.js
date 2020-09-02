@@ -23,15 +23,6 @@ admin.initializeApp({
 
 const db = admin.firestore();
 const firebaseConfig = {
-    // apiKey: "AIzaSyBi2E4XtTKurP0vvBM3gQ9dTFxLagL4bxM",
-    // authDomain: "phone-e-commerce-api.firebaseapp.com",
-    // databaseURL: "https://phone-e-commerce-api.firebaseio.com",
-    // projectId: "phone-e-commerce-api",
-    // storageBucket: "phone-e-commerce-api.appspot.com",
-    // messagingSenderId: "1024476266190",
-    // appId: "1:1024476266190:web:312d544ed753d1d7d35a9f",
-    // measurementId: "G-ZF4LLL1L2E"
-
     apiKey: "AIzaSyCmGcaAoozk7QY4jWWNqx12RPbAC0AC3Zg",
     authDomain: "ssd2-cf69f.firebaseapp.com",
     databaseURL: "https://ssd2-cf69f.firebaseio.com",
