@@ -94,6 +94,15 @@ def connections():
     connections = discord.get(API_BASE_URL + '/users/@me/connections').json()
     return render_template('index4.html', connections=connections)
 
+
+@app.route('/data')
+def data():
+    discord = make_session(token=session.get('oauth2_token'))
+    user = discord.get(API_BASE_URL + '/users/@me').json()
+    guilds = discord.get(API_BASE_URL + '/users/@me/guilds').json()
+    connections = discord.get(API_BASE_URL + '/users/@me/connections').json()
+    return jsonify(user=user, guilds=guilds, connections=connections)
+
 if __name__ == '__main__':
     app.run()
 
