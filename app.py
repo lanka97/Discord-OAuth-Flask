@@ -69,7 +69,7 @@ def callback():
     #print(token)
     session['oauth2_token'] = token
     print(session.get('oauth2_token'))
-    return redirect(url_for('.home'))
+    return redirect(url_for('.profile'))
 
 
 @app.route('/home')

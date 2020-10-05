@@ -35,11 +35,11 @@
 			 background-size: cover;
 			 background-color: #cccccc;
 			 margin: 0;
-			 padding; 0;
+			 padding: 0;
 		}
 
 		.upperBanner{
-			height:80px;
+			height:40px;
 		}
 
 		.center {
@@ -50,7 +50,7 @@
 
 		h1{
 			  color: white;
-			  margin-top:60px;
+			  margin-top:10px;
 		}
 		.column {
 				float: left;
@@ -63,54 +63,53 @@
 			  clear: both;
 		}
 		.card{
-			height: 500;
+			height: 200;
 			color: white;
-			margin:20px;
+			margin-left:30px;
 		}
 	</style>
     <title>Discord lite</title>
 </head>
 <body>
-<div class="upperBanner">
-   <h1>Hello mate! This is your discord Lite :)</h1>
-</div>
-<div>
-   <ul>
-  <li><a href="http://localhost:5000/">Home</a></li>
-  <li><a href="http://localhost:5000/profile">Profile</a></li>
-  <li><a href="http://localhost:5000/channels" style="background-color:green">Channels</a></li>
-  <li><a href="http://localhost:5000/connections">Connections</a></li>
-  <li style="float:right; background-color:red"><a href="http://localhost:5000/index">Log Out</a></li>
-</ul>
-</div>
-<div>
-<div class="row">
-  <div class="column" >
-  
-  </div>
-  <div class="column"></div>
-</div>
-  <div class="column">
-    <div class="card">
-	<div class="center">
-	<center>
-		<h1>Channels</h1><br/>
-	</center>
-		{% for guild in guilds %}
-			<h2>Id:	{{guild.id}}</h2>
-			<h2>Name:	{{guild.name}}</h2>
-			<h2>Owner:	{{guild.owner}}</h2>
-			<br/>
-		{% endfor %}
+	<div class="upperBanner">
+		<h1>Hello mate! This is your discord Lite :)</h1>
 	</div>
+	<div>
+		<ul>
+		<li><a href="http://localhost:5000/profile">Profile</a></li>
+		<li><a href="http://localhost:5000/channels" style="background-color:green">Channels</a></li>
+		<li><a href="http://localhost:5000/connections">Connections</a></li>
+		<li style="float:right; background-color:red"><a href="http://localhost:5000/index">Log Out</a></li>
+		</ul>
 	</div>
-  </div>
-  <div class="column">
-    <div class="card">
-		<img src="https://www.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png" alt="Dicord logo" width="470" height="500" class="center">
+	<div>
+		<div class="row">
+		<div class="column" >
+		
+		</div>
+		<div class="column"></div>
+		</div>
+		<div class="column">
+			<div class="card">
+			<div class="center">
+			
+				<h1>Channel Details</h1>
+			
+				{% for guild in guilds %}
+					<h3>Name: {{guild.name}}</h3>
+					<h4>Id:	{{guild.id}}</h4>
+					<h4>Owner: {{guild.owner}}</h4>
+					<br/>
+				{% endfor %}
+			</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img src="https://www.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png" alt="Dicord logo" width="470" height="500" class="center">
+			</div>
+		</div>
 	</div>
-  </div>
-</div>
 </div>
 </body>
 </html>

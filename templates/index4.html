@@ -35,11 +35,11 @@
 			 background-size: cover;
 			 background-color: #cccccc;
 			 margin: 0;
-			 padding; 0;
+			 padding: 0;
 		}
 
 		.upperBanner{
-			height:80px;
+			height:40px;
 		}
 
 		.center {
@@ -50,7 +50,7 @@
 
 		h1{
 			  color: white;
-			  margin-top:60px;
+			  margin-top:10px;
 		}
 		.column {
 				float: left;
@@ -63,7 +63,7 @@
 			  clear: both;
 		}
 		.card{
-			height: 500;
+			height: 200;
 			color: white;
 			margin:20px;
 		}
@@ -76,7 +76,6 @@
 </div>
 <div>
    <ul>
-  <li><a href="http://localhost:5000/">Home</a></li>
   <li><a href="http://localhost:5000/profile">Profile</a></li>
   <li><a href="http://localhost:5000/channels" >Channels</a></li>
   <li><a href="http://localhost:5000/connections" style="background-color:green">Connections</a></li>
@@ -93,12 +92,14 @@
   <div class="column">
     <div class="card">
 	<div class="center">
-	<center>
-		<h1>Connections</h1><br/>
-	</center>
+		<h1>Connections</h1>
+
 		{% for connection in connections %}
-			<h2>Name: {{connection.name}}</h2>
-			<h2>Type: {{connection.type}}</h2>
+			<h3>Connection Type: {{connection.type}}</h3>
+			<h4>Name: {{connection.name}}</h4>
+			<h4>Friends Visibility: {{connection.friend_sync}}</h4>
+			<h4>Activity Status: {{connection.show_activity}}</h4>
+			<h4>Verified: {{connection.verified}}</h4>
 			<br/>
 		{% endfor %}
 	</div>

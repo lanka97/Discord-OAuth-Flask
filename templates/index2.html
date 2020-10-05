@@ -34,11 +34,11 @@
 			 background-size: cover;
 			 background-color: #cccccc;
 			 margin: 0;
-			 padding; 0;
+			 padding: 0;
 		}
 
 		.upperBanner{
-			height:80px;
+			height:40px;
 		}
 
 		.center {
@@ -49,7 +49,7 @@
 
 		h1{
 			  color: white;
-			  margin-top:60px;
+			  margin-top:10px;
 		}
 		.column {
 				float: left;
@@ -62,7 +62,7 @@
 			  clear: both;
 		}
 		.card{
-			height: 500;
+			height: 200;
 			color: white;
 			margin:20px;
 		}
@@ -75,7 +75,6 @@
 </div>
 <div>
    <ul>
-  <li><a href="http://localhost:5000/">Home</a></li>
   <li><a href="http://localhost:5000/profile" style="background-color:green">Profile</a></li>
   <li><a href="http://localhost:5000/channels">Channels</a></li>
   <li><a href="http://localhost:5000/connections">Connections</a></li>
@@ -92,14 +91,16 @@
   <div class="column">
     <div class="card">
 	<div class="center">
-	<center>
 		<h1>User Profile</h1><br/>
-	</center>
-		<img src="https://i.imgur.com/kkjs7EC.png" alt="Dicord logo" width="200" height="200" class="center"><br/>
+
+		<img src="https://i.imgur.com/SaqRzfU.png" alt="Dicord logo" width="200" height="200" class="center"><br/>
 		<center>
-		User Name: {{user.id}}<br/>
-		User Name: {{user.username}}<br/>
-		Email: {{user.email}}
+		<h4>User ID: {{user.id}}</h4>
+		<h4>User Name: {{user.username}}</h4>
+		<h4>Email: {{user.email}}</h4>
+		<h4>Discriminator ID: #{{user.discriminator}}</h4>
+		<h4>Language: {{user.locale}}</h4>
+		<h4>Verified Status: {{user.verified}}</h4>
 		</center>
 	</div>
 	</div>
